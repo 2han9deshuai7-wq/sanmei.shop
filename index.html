@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>三妹猪肉铺Vip全球通</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="302c944d-2b43-8045-ab9c-ddc6932c7fb1" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1616437385687-2753405b52fd?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🌐</span></div><h1 class="page-title" dir="auto">三妹猪肉铺Vip全球通</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><blockquote id="e97e389b-cb22-4a64-b701-106499a4e185" class="">我们并非资本催生的产物，而是深耕行业的专业主义者。在行业混沌之时，我们带着对规则的敬畏和对专业的偏执入场。</blockquote></div><div style="display:contents" dir="ltr"><figure class="callout" style="white-space:pre-wrap;display:flex" id="2809072e-fa43-49ac-b5cd-ce6c6ecdac41"><div style="width:100%"><div style="display:contents" dir="auto"><p id="1c0b9e6f-e0f0-44d0-a2e0-b2646b69bc12" class=""><strong><a href="https://t.me/San_Mei">立即购买</a></strong> | <strong><a href="https://t.me/Sanmeiss_Bot">了解更多</a></strong> | <strong><a href="https://t.me/Sanmeiss_Bot">联系我们</a></strong></p></div><div style="display:contents" dir="auto"><p id="8a6f39c8-ded0-4e2b-b399-9b1561e258ba" class=""><a href="https://t.me/+D31E1dRMmAkyYmM1">点击进入官方 Telegram 频道</a></p></div></div></figure></div><div style="display:contents" dir="ltr"><nav id="7c3a7e34-4ca6-4cd4-a4b9-91aa15c0990c" class="table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#302c944d-2b43-80a3-92df-da14967b3202">关于我们</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a5252e72-9140-4d73-a4cf-177278a6a7d8">产品分类</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#29fc802f-c4be-4ab6-ad3b-eef2b3e8cd36">实力与保障</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#761facb7-e6d8-4589-895e-b17c722afa34">付款方式</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#302c944d-2b43-809a-8cc6-f3aaf22358c3">常见问题</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#302c944d-2b43-80c0-a26a-f7d05005ea84">联系我们</a></div></nav></div><div style="display:contents" dir="auto"><hr id="f8243312-ea0b-4644-8598-0c8e554e12f9"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">关于我们</summary><div class="indented"><div style="display:contents" dir="auto"><p id="f0ec7412-7d2a-41fc-afe9-2ebc926818ce" class=""><strong>品牌故事</strong></p></div><div style="display:contents" dir="auto"><p id="59453765-79a7-4f26-80f4-ae8aadbf14ae" class="">我们并非资本催生的产物，而是深耕行业的专业主义者。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-8033-9584-e82a78bbe721" class="">在行业混沌之时，我们带着对规则的敬畏和对专业的偏执入场。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-8003-b18c-cfb714571efd" class="">深耕领域多年，致力于行业的“压舱石”。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-8053-81bc-c3f7c4516770" class="">在乱象丛生的市场中，我们不仅提供货源，更提供<strong>安全性。</strong></p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-806e-bfc6-e43e34acd1c1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="42c854c5-9a7c-418d-97b0-24c9337610a5" class=""><strong>愿景与使命</strong></p></div><div style="display:contents" dir="auto"><p id="bc78aaa4-63e7-4182-a420-561bb826714e" class="">不屑于与小丑计较，不沉溺于低端博弈。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-803d-a3e4-fd3753ac0a71" class="">三妹猪肉铺致力于一个<strong>真实、稳定、长期</strong>的顶级渠道。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-8027-815b-c7fa16b72f0f" class="">面对&quot;低价竞争、款式抄袭、营销至上&quot;的浮躁市场，我们选择做那个&quot;秩序的建立者&quot;</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-8094-b40c-f9eeb8f6e7a7" class="">成为行业的压舱石，让“良币”成为唯一的通行证，构建一个以实力说话的商业新秩序。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-80dc-b1c9-ebb6dbeb6b91" class="">
+</p></div><div style="display:contents" dir="auto"><p id="0a8623da-4d80-44ec-a683-e8e410cdb03d" class=""><strong>核心价值与品牌态度</strong></p></div><div style="display:contents" dir="auto"><p id="297396d6-9ae0-4d7a-9a23-61d0f71ac22c" class="">真正的格局，无法被复刻；真正的底气，从不靠声张。营销可以跟风，款式可以模仿，但支撑行业安全保障的灵魂永远无法被抄袭。</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-80e4-8a0a-c55fafda028b" class="">我们要让合作伙伴感受到：在这个乱象丛生的市场，选择我们，就是选择了最稳固的护城河。</p></div><div style="display:contents" dir="auto"><p id="4a7f6afb-e0fb-47c1-a825-451a4f0d4e13" class=""><strong>实力证明</strong></p></div><div style="display:contents" dir="auto"><p id="370bf29f-2669-40d6-b522-6325ba62ca8e" class="">真正的实力靠的是产品和服务。同行恶意诋毁只能证明其心虚。狼永远不会在意羊的叫嚣，我们不但能让你无路可走，还能让你见识什么叫真正的行业规则。哪些恶意诋毁的，总有一天会望尘莫及。</p></div></div></details></div><div style="display:contents" dir="auto"><hr id="b5c605d6-c2fb-403a-b670-77bee904950f"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">产品分类</summary><div class="indented"><div style="display:contents" dir="auto"><h3 id="1156b475-daad-4e63-97db-19f2f418097e" class="">高纯度猪肉</h3></div><div style="display:contents" dir="ltr"><table id="907ff830-e6fc-4c4c-8db6-155ce9a35d88" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="22a17df6-6404-4cff-b747-72dfab0d18e3"><th id="=wLv" class="simple-table-header-color simple-table-header"><strong>项目</strong></th><th id="}f]q" class="simple-table-header-color simple-table-header"><strong>详情</strong></th><th id="wQnF" class="simple-table-header-color simple-table-header"></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="49d1465c-1484-44c2-bf96-5f6bb6fb0c75"><td id="=wLv" class="">规格</td><td id="}f]q" class="">2g - 1kg</td><td id="wQnF" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="24faf896-a849-4ccb-a1e3-15a865fe5039"><td id="=wLv" class="">数量</td><td id="}f]q" class="">支持零售 / 批发</td><td id="wQnF" class=""></td></tr></div><div style="display:contents" dir="ltr"><tr id="9ca56469-e849-46c0-b096-463c557e1dcc"><td id="=wLv" class="">价格</td><td id="}f]q" class="">200$ - 150000$</td><td id="wQnF" class=""></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="da9b79d0-6a68-4337-af74-872b76c2f335" class=""><strong>产品特点</strong></p></div><div style="display:contents" dir="auto"><ul id="a566f014-2d8d-410d-82c4-162693c586c8" class="bulleted-list"><li style="list-style-type:disc">货源稳定，安全可控，品质把控严格</li></ul></div><div style="display:contents" dir="auto"><ul id="62deeb4f-1add-4362-bd35-53e400ea3967" class="bulleted-list"><li style="list-style-type:disc">提神醒脑、精力旺盛、熬夜必备</li></ul></div><div style="display:contents" dir="auto"><ul id="52489f1b-44eb-481f-b89f-33158213f9f5" class="bulleted-list"><li style="list-style-type:disc">足秤无缺、不掺辅料、精力无限</li></ul></div><div style="display:contents" dir="auto"><p id="23dbe0c0-4bca-4ce4-bff4-a6af49ef4c17" class=""><strong>服务保障</strong></p></div><div style="display:contents" dir="auto"><ul id="56ef4b6d-3059-4d3a-8e71-16f71ebbd6c9" class="bulleted-list"><li style="list-style-type:disc">商品均为实物拍摄，所见即所得</li></ul></div><div style="display:contents" dir="auto"><ul id="c7abcb32-1a70-47a5-909f-4b7377530269" class="bulleted-list"><li style="list-style-type:disc">金边市区 1 小时极速送达</li></ul></div><div style="display:contents" dir="auto"><ul id="35b65686-886b-4428-91c9-32dfdba30940" class="bulleted-list"><li style="list-style-type:disc">外省地区支持次日达 / 预定配送</li></ul></div><div style="display:contents" dir="auto"><ul id="c40f7a4c-df2f-4aae-bd69-a72f088dffc5" class="bulleted-list"><li style="list-style-type:disc">支持园区配送 &amp; 特殊安排（请提前沟通）</li></ul></div><div style="display:contents" dir="auto"><hr id="7420bfaf-70ee-4c9b-ae6c-e248cd927ae7"/></div><div style="display:contents" dir="auto"><h3 id="9994984d-6cb2-4be5-b8c1-1156ea8659b8" class="">Etomidate｜原料</h3></div><div style="display:contents" dir="ltr"><table id="4d580c0c-097f-4528-bb72-b9b6c860e76b" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="ad49b60b-f08c-4390-bf2e-174a3c3c87e9"><th id="ozi_" class="simple-table-header-color simple-table-header"><strong>项目</strong></th><th id="BT?A" class="simple-table-header-color simple-table-header"><strong>详情</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="2a2a6b53-452d-4ef8-8221-3bccff2f2c75"><td id="ozi_" class="">规格</td><td id="BT?A" class="">100g - 1kg</td></tr></div><div style="display:contents" dir="ltr"><tr id="45e7c6ac-2903-4216-bb34-afd16570c5ba"><td id="ozi_" class="">数量</td><td id="BT?A" class="">支持零售 / 批发</td></tr></div><div style="display:contents" dir="ltr"><tr id="cfc4b81d-e17e-4682-80a5-6df7bddc4730"><td id="ozi_" class="">价格</td><td id="BT?A" class="">4999$ - 150000$</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="69629426-ec4e-4f37-892b-4ffe1c0c77d2" class=""><strong>产品特点</strong></p></div><div style="display:contents" dir="auto"><ul id="7eed8063-3968-4661-93a6-a07713cdeb04" class="bulleted-list"><li style="list-style-type:disc">依托原料 / 依托原油 / 依托技术合成原料</li></ul></div><div style="display:contents" dir="auto"><ul id="c1b66209-3447-455f-817e-33704f4cb087" class="bulleted-list"><li style="list-style-type:disc">纯度高，质量稳定起效快，作用时间短，恢复迅速</li></ul></div><div style="display:contents" dir="auto"><ul id="34d93004-287e-410b-8952-f67ce123e241" class="bulleted-list"><li style="list-style-type:disc">按批量方式供应，适用于特定合作需求</li></ul></div><div style="display:contents" dir="auto"><ul id="4cd638e5-f680-4ce7-b4cd-44366412aa60" class="bulleted-list"><li style="list-style-type:disc">全球发货（中国除外），柬埔寨本地配送 25 小时内</li></ul></div><div style="display:contents" dir="auto"><hr id="1d4c5410-e6ff-4225-a739-95107850e6b2"/></div><div style="display:contents" dir="auto"><h3 id="b20d4a0f-56d4-4a7e-a576-c5f36fd8088c" class="">Etomidate｜烟弹</h3></div><div style="display:contents" dir="ltr"><table id="b02c6762-5bd1-4c0e-a927-a390b933aef5" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="f2341455-34cf-499b-a979-cf6082e11c56"><th id="`FnP" class="simple-table-header-color simple-table-header"><strong>项目</strong></th><th id="JDZf" class="simple-table-header-color simple-table-header"><strong>详情</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="f677783e-011d-43e8-a1db-a8b861d1046f"><td id="`FnP" class="">规格</td><td id="JDZf" class="">20-1000ml</td></tr></div><div style="display:contents" dir="ltr"><tr id="eae67cd8-4169-4cae-b70b-5959297dd254"><td id="`FnP" class="">数量</td><td id="JDZf" class="">支持零售 / 批发</td></tr></div><div style="display:contents" dir="ltr"><tr id="918e2a82-7250-4eba-a3d0-573e67d77ab2"><td id="`FnP" class="">价格</td><td id="JDZf" class="">400$ - 20000$</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="98e28db8-794f-4734-9426-3fabfd17cdfe" class=""><strong>产品特点</strong></p></div><div style="display:contents" dir="auto"><ul id="d0fe0b17-c8b9-49de-b52a-29276aa2b736" class="bulleted-list"><li style="list-style-type:disc">依托原料 / 依托原油 / 依托技术合成原料</li></ul></div><div style="display:contents" dir="auto"><ul id="8eca23b0-56aa-4629-9379-a2f6395d972b" class="bulleted-list"><li style="list-style-type:disc">纯度高，质量稳定起效快，作用时间短，恢复迅速</li></ul></div><div style="display:contents" dir="auto"><ul id="3fc1d976-f607-4718-8349-09e2250d7c52" class="bulleted-list"><li style="list-style-type:disc">按批量方式供应，适用于特定合作需求</li></ul></div><div style="display:contents" dir="auto"><ul id="1b376e10-edbf-4168-9bf6-457e19fc2af7" class="bulleted-list"><li style="list-style-type:disc">全球发货（中国除外），柬埔寨本地配送 25 小时内</li></ul></div><div style="display:contents" dir="auto"><hr id="105ebd32-2267-46dc-99b1-b62f290ce502"/></div><div style="display:contents" dir="auto"><h3 id="357b75f8-f738-45e1-957b-e6c4bfdb8844" class="">特色饮品（法拉利 / LV / 爱马仕）</h3></div><div style="display:contents" dir="ltr"><table id="3366ca7d-3fbe-4106-bd1e-4e9c228d8fb1" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="bc24cbd2-40f7-4ab6-ba28-5429202bc3c9"><th id="f&lt;rR" class="simple-table-header-color simple-table-header"><strong>项目</strong></th><th id="TEfP" class="simple-table-header-color simple-table-header"><strong>详情</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="883c15cd-1af8-4296-ac53-8bdecf05d57a"><td id="f&lt;rR" class="">规格</td><td id="TEfP" class="">10包 - 500包</td></tr></div><div style="display:contents" dir="ltr"><tr id="db4be789-0f9c-4c2f-ba1c-86ad6e34bd9a"><td id="f&lt;rR" class="">数量</td><td id="TEfP" class="">支持零售 / 批发</td></tr></div><div style="display:contents" dir="ltr"><tr id="649c651b-dcec-43e6-891b-d85fd4278b5b"><td id="f&lt;rR" class="">价格</td><td id="TEfP" class="">3500$ - 50000$</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="54c2b232-cb02-4a97-8e53-6d28b619c090" class=""><strong>产品特点</strong></p></div><div style="display:contents" dir="auto"><ul id="e3487475-e92a-4230-badb-d753f000b97d" class="bulleted-list"><li style="list-style-type:disc">法拉利的激情，LV 的态度，爱马仕的格调</li></ul></div><div style="display:contents" dir="auto"><ul id="ef312216-dcbe-470c-aa4d-ffac96c2e8d7" class="bulleted-list"><li style="list-style-type:disc">高端口感，时尚包装，彰显品味</li></ul></div><div style="display:contents" dir="auto"><ul id="eb175916-4d30-47da-bc49-7e9f0f87a267" class="bulleted-list"><li style="list-style-type:disc">多种口味饮品、开心饮料、口感独特</li></ul></div><div style="display:contents" dir="auto"><hr id="2d1e1f4e-531e-4693-a8f9-35ba2142b607"/></div><div style="display:contents" dir="auto"><h3 id="5eaeb4e1-4edd-453b-bda1-a098304fcc2b" class="">缅甸果子 / 糖果</h3></div><div style="display:contents" dir="ltr"><table id="e9eacce1-aaca-4a86-975f-f50afcfc779d" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="88f37ece-7e30-43c6-9214-6f5ad21712a2"><th id="MtyQ" class="simple-table-header-color simple-table-header"><strong>项目</strong></th><th id="B{&gt;^" class="simple-table-header-color simple-table-header"><strong>详情</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="16f285b8-5898-4c08-a0a5-5e66058e6181"><td id="MtyQ" class="">规格</td><td id="B{&gt;^" class="">10 - 500个</td></tr></div><div style="display:contents" dir="ltr"><tr id="078928e1-ba4c-4f26-9c2b-7d51c83f2489"><td id="MtyQ" class="">数量</td><td id="B{&gt;^" class="">支持零售 / 批发</td></tr></div><div style="display:contents" dir="ltr"><tr id="10296b44-189b-4808-8513-f3d5ff752eb6"><td id="MtyQ" class="">价格</td><td id="B{&gt;^" class="">300$ - 5000$</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="5d68dd76-7fe4-4bf4-9160-af1cf2e04e42" class=""><strong>产品特点</strong></p></div><div style="display:contents" dir="auto"><ul id="01f4e247-3aca-447f-b5a7-d7ef3b9e3ebf" class="bulleted-list"><li style="list-style-type:disc">货源稳定，安全可控，品质把控严格</li></ul></div><div style="display:contents" dir="auto"><ul id="83aafa35-8f56-47ae-8258-ccfeb5605662" class="bulleted-list"><li style="list-style-type:disc">香味浓郁，两口即可感受效果</li></ul></div><div style="display:contents" dir="auto"><ul id="a9f5e0b5-58d7-43a8-b061-25707f6326fe" class="bulleted-list"><li style="list-style-type:disc">支持零售与批发，货源稳定</li></ul></div><div style="display:contents" dir="auto"><p id="a7f01821-5259-4fea-9a4f-be896b490abb" class=""><strong>服务保障</strong></p></div><div style="display:contents" dir="auto"><ul id="ea5d8962-7b7e-4c48-ae9d-cd4c7a387165" class="bulleted-list"><li style="list-style-type:disc">商品均为实物拍摄，所见即所得</li></ul></div><div style="display:contents" dir="auto"><ul id="ecc3e27f-e336-4af8-9b18-5f82b99f2c46" class="bulleted-list"><li style="list-style-type:disc">金边市区 1 小时极速送达</li></ul></div><div style="display:contents" dir="auto"><ul id="3cec6a02-8271-4e7e-b498-756243e0e50d" class="bulleted-list"><li style="list-style-type:disc">外省地区支持次日达 / 预定配送</li></ul></div><div style="display:contents" dir="auto"><ul id="dbee3474-ac32-4d84-8004-2fcbea5b92fc" class="bulleted-list"><li style="list-style-type:disc">支持园区配送 &amp; 特殊安排（请提前沟通）</li></ul></div></div></details></div><div style="display:contents" dir="auto"><hr id="b67c3a26-2ae0-48a5-ac03-243cd88418e9"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">实力与保障</summary><div class="indented"><div style="display:contents" dir="auto"><p id="574604c1-9925-4048-abbf-ed56b03ba1ac" class=""><strong>供应链：硬核资质</strong></p></div><div style="display:contents" dir="auto"><p id="2ae3e84b-e366-4a15-ad16-2ceecd8f5294" class="">三妹实体医药店，营业证 经营许可证、执业药师证）</p></div><div style="display:contents" dir="auto"><p id="428acb68-dd39-4b02-8f4c-94b3654110b1" class="">源头直供，涵盖特管及常规品种，货源稳，渠道硬。</p></div><div style="display:contents" dir="auto"><p id="5d0edc1d-cb68-45b5-81f5-e0288d34b62d" class=""><strong>流程：精准对接，高效成交</strong></p></div><div style="display:contents" dir="auto"><p id="202374a0-1d3c-4459-bc13-6ee65318d241" class="">信用交付：讲信用、重效率，到单即发，绝不拖秒。</p></div><div style="display:contents" dir="auto"><p id="b89b4d59-0d27-4fe7-9968-a5c1342667d5" class=""><strong>合规：行业规则的守门员</strong></p></div><div style="display:contents" dir="auto"><p id="a6e15c8d-47e1-4ac0-8c47-0dce88292a56" class="">我们深耕批发多年，靠的是产品和服务，而非一张嘴。所有货源真实实拍，用资质封堵风险，用专业建立行业护城河。</p></div><div style="display:contents" dir="auto"><p id="bee06967-9bab-43d0-8ca0-4a663bb609c1" class=""><strong>口碑：用实力让诋毁者闭嘴</strong></p></div><div style="display:contents" dir="auto"><p id="bf6a09db-9114-450d-b98b-9188b8117479" class="">真正的赢家不屑于口舌之争。合作伙伴的数据展示和真实反馈，就是我们最有力的回击。</p></div></div></details></div><div style="display:contents" dir="auto"><hr id="23099aaa-3090-4589-9e30-c865864395ea"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">付款方式</summary><div class="indented"><div style="display:contents" dir="auto"><p id="e19860ed-d8e3-49e5-8411-1d49678cb651" class=""><strong>支持以下支付方式</strong></p></div><div style="display:contents" dir="auto"><ul id="e68ebde3-094b-4537-a01d-c5424fa06e65" class="bulleted-list"><li style="list-style-type:disc">USDT（TRC20）</li></ul></div><div style="display:contents" dir="auto"><ul id="d546ff7b-628c-4101-b5a0-37b385fdc76c" class="bulleted-list"><li style="list-style-type:disc">ABA 本地转账（仅限柬埔寨）</li></ul></div><div style="display:contents" dir="auto"><p id="d4a2f763-d364-4507-8545-b08071b3a780" class=""><strong>付款须知</strong></p></div><div style="display:contents" dir="auto"><ul id="c40abfd1-f85a-4e19-b1b3-33ea0c72f90d" class="bulleted-list"><li style="list-style-type:disc">请先支付货款，付款完成后发送付款截图确认</li></ul></div><div style="display:contents" dir="auto"><ul id="79b0beb2-b35d-4ffe-a93a-79abfb1039e0" class="bulleted-list"><li style="list-style-type:disc">确认到账后，请发送收货位置</li></ul></div><div style="display:contents" dir="auto"><ul id="df578c1f-6f0b-45e6-9342-144c349ad486" class="bulleted-list"><li style="list-style-type:disc">未付款 / 未确认款项，一律不发货</li></ul></div><div style="display:contents" dir="auto"><ul id="cc91f30d-0efa-4077-b6f6-ddf9756f47b4" class="bulleted-list"><li style="list-style-type:disc">请勿擅自转账，务必按指定信息操作</li></ul></div></div></details></div><div style="display:contents" dir="auto"><hr id="837a3472-3c2a-45c7-8f9e-3e5a5b29608c"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">常见问题</summary><div class="indented"><div style="display:contents" dir="auto"><p id="a40677cc-2db0-458b-b74b-6ef50d2e00f9" class=""><strong>配送流程</strong></p></div><div style="display:contents" dir="auto"><ol type="1" id="faabf163-bc58-4c29-8479-2ad774986278" class="numbered-list" start="1"><li>付款确认后，发送你的取货位置</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="a4834d75-3ff7-4a49-a386-3d260c53d459" class="numbered-list" start="2"><li>安排人员配送至你的位置附近，并拍照标记，方便提取</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="e6f434d1-adc5-4e4e-9b76-e1083c4ac074" class="numbered-list" start="3"><li>如需特殊配送服务，请提前联系管理员协商</li></ol></div><div style="display:contents" dir="auto"><p id="f906cec1-617d-450c-9293-95747b6dd6cb" class=""><strong>配送时间</strong></p></div><div style="display:contents" dir="auto"><ul id="462613d2-62e2-4950-9475-ff556c671255" class="bulleted-list"><li style="list-style-type:disc">金边市区：1 小时极速送达</li></ul></div><div style="display:contents" dir="auto"><ul id="23f18768-1d3e-4756-9a84-139b10f152b8" class="bulleted-list"><li style="list-style-type:disc">外省地区：次日达 / 预定配送</li></ul></div><div style="display:contents" dir="auto"><ul id="242c1e4c-d97a-46c2-868b-fd02cf09d0c5" class="bulleted-list"><li style="list-style-type:disc">国际配送：根据目的地而定（中国除外）</li></ul></div><div style="display:contents" dir="auto"><p id="a93e1edb-3a7b-449b-85ae-e056ceac4247" class=""><strong>售后保障</strong></p></div><div style="display:contents" dir="auto"><ul id="ddc4d3ff-c2fa-442a-a8f6-63fb226c8599" class="bulleted-list"><li style="list-style-type:disc">商品均为实物拍摄，所见即所得</li></ul></div><div style="display:contents" dir="auto"><ul id="e2ec5391-5634-4b68-90ab-ca814c48995a" class="bulleted-list"><li style="list-style-type:disc">因商品特殊性，售出后不支持退换</li></ul></div><div style="display:contents" dir="auto"><ul id="7192e2f3-107c-4658-ae43-70d4a96acc3a" class="bulleted-list"><li style="list-style-type:disc">请确认需求后再下单</li></ul></div><div style="display:contents" dir="auto"><p id="3cfe4899-10f2-42e8-a302-2ed21834ab69" class=""><strong>安全提示</strong></p></div><div style="display:contents" dir="auto"><ul id="3f92213d-c214-47b4-842d-76cc63a0d06a" class="bulleted-list"><li style="list-style-type:disc">请通过官方 Telegram 频道联系，谨防假冒</li></ul></div><div style="display:contents" dir="auto"><ul id="5e331720-2221-4b31-a4dd-17fb00648ee3" class="bulleted-list"><li style="list-style-type:disc">付款前务必核对账户信息，避免转错</li></ul></div><div style="display:contents" dir="auto"><ul id="ca28eabc-150f-43d6-8e79-7fb7078c2184" class="bulleted-list"><li style="list-style-type:disc">取货时注意周围环境，确保个人安全</li></ul></div><div style="display:contents" dir="auto"><ul id="e03b66f6-6090-4dcd-9090-975f60216eb2" class="bulleted-list"><li style="list-style-type:disc">商品仅供合法用途，请遵守当地法律法规</li></ul></div><div style="display:contents" dir="auto"><ul id="e681eab2-54ce-433c-83cd-3a078c07f275" class="bulleted-list"><li style="list-style-type:disc">请勿向他人透露交易详情，保护隐私安全</li></ul></div></div></details></div><div style="display:contents" dir="auto"><hr id="44baf7a3-3fea-4a4b-8d6e-a5d197466bd7"/></div><div style="display:contents" dir="auto"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">联系我们</summary><div class="indented"><div style="display:contents" dir="auto"><p id="3a467418-ed25-44b5-9f5f-34103df24c8b" class=""><strong>官方联系方式</strong></p></div><div style="display:contents" dir="auto"><ul id="4a8b59a1-ab16-490c-8681-2727943a8643" class="bulleted-list"><li style="list-style-type:disc"><strong> 加入 </strong><strong><a href="https://t.me/+FSNW4TzlHw4xMjI1">Telegram 群组</a></strong></li></ul></div><div style="display:contents" dir="auto"><ul id="302c944d-2b43-80ae-b5d6-e875407fd512" class="bulleted-list"><li style="list-style-type:disc"><strong> 加入 </strong><strong><a href="https://t.me/+D31E1dRMmAkyYmM1">Telegram 频道</a></strong></li></ul></div><div style="display:contents" dir="auto"><ul id="7a20aa5d-b4bc-4427-9041-ed7055872be5" class="bulleted-list"><li style="list-style-type:disc"><strong>👉  </strong><strong><a href="https://t.me/Sanmeiss_Bot">客服支持</a></strong></li></ul></div><div style="display:contents" dir="auto"><p id="2e5ea1e3-8ca4-49ac-b58f-dc943fcef642" class="">请认准频道内置联系方式，防骗防冒充，不主动私聊客户</p></div><div style="display:contents" dir="auto"><p id="302c944d-2b43-803e-9eb8-ccc7f8b8c546" class="">
+</p></div><div style="display:contents" dir="auto"><p id="cc849a0e-9d5c-4318-9a6e-1c2ffe2660b4" class=""><strong>在线时间</strong></p></div><div style="display:contents" dir="auto"><ul id="127ba7d0-5d25-46cf-9517-f6d27481fb4a" class="bulleted-list"><li style="list-style-type:disc">7×25 小时在线（全年无休）</li></ul></div><div style="display:contents" dir="auto"><ul id="a0c0bcd4-4810-4d96-81e4-04efa30ee7eb" class="bulleted-list"><li style="list-style-type:disc">响应效率：工作时间内即时响应</li></ul></div></div></details></div><div style="display:contents" dir="auto"><hr id="15d8bf61-b38f-49e2-b289-fd0b0b858c79"/></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2cd18f65-0eef-4e1c-8e27-1514958cb2bb"><div style="width:100%"><div style="display:contents" dir="auto"><p id="0c6f075f-cc3f-4ccb-8e09-dda7f272bac8" class=""><strong>版权声明</strong></p></div><div style="display:contents" dir="auto"><p id="4ed8b53e-14c9-47c6-8022-d85e2cb75174" class="">版权所有 © 2020 三妹猪肉铺 SmPorkBot | 保留所有权利</p></div><div style="display:contents" dir="auto"><p id="b9085a7f-ed72-4f76-90ce-0b9b8adeffe8" class=""><strong>免责声明</strong></p></div><div style="display:contents" dir="auto"><p id="afb88c4d-a6fc-4da0-a9a3-78e20cba5fc5" class="">本页面所展示的产品信息仅供参考。所有交易行为请遵守当地法律法规。三妹猪肉铺不对因违反当地法律而产生的任何后果承担责任。请用户自行判断并承担风险。</p></div></div></figure></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
